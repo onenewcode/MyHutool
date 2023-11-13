@@ -8,7 +8,10 @@ version = '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-
+// 强制实行是统一格式编码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
